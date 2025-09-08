@@ -1,9 +1,9 @@
-pkgbase = carnet-bin
+pkgbase = cassette-bin
 	pkgdesc = Take notes without bloat
-	pkgver = 2.0.8
+	pkgver = 2.1.6
 	pkgrel = 1
-	url = https://github.com/results-may-vary-org/carnet
-	install = carnet-bin.install
+	url = https://github.com/results-may-vary-org/cassette
+	install = cassette-bin.install
 	arch = x86_64
 	license = GPL
 	depends = cairo
@@ -17,7 +17,7 @@ pkgbase = carnet-bin
 	depends = webkit2gtk-4.1
 	options = !strip
 	options = !emptydirs
-	source_x86_64 = https://github.com/results-may-vary-org/carnet/releases/download/v2.0.8/carnet_2.0.8_amd64.deb
-	sha256sums_x86_64 = 3aaba37aa3a538f05eee8b3a5c53a5d97fd7fda3e87f273884cc75fdedebeb3b
+	source_x86_64 = https://github.com/results-may-vary-org/cassette/releases/download/v2.1.6/cassette_2.1.6_amd64.deb
+	sha256sums_x86_64 = 61435d5a9db670b9d2dffab157bf221a0d57d7069a7383b7454067d6b3a2d800
 
-pkgname = carnet-bin
+pkgname = cassette-bin
