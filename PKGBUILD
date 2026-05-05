@@ -1,8 +1,8 @@
 # Maintainer: Bouteiller a2n Alan <a2n.dev@pm.me>
 pkgname=tape-bin
 appname=tape
-pkgver=3.7.1
-pkgrel=2
+pkgver=3.7.3
+pkgrel=3
 pkgdesc="Take notes without bloat"
 arch=('x86_64')
 url="https://github.com/results-may-vary-org/tape"
@@ -10,14 +10,14 @@ license=('GPL')
 depends=('glibc' 'gtk3' 'webkit2gtk-4.1' 'desktop-file-utils' 'hicolor-icon-theme')
 options=('!strip' '!emptydirs')
 install=${pkgname}.install
-source_x86_64=("${url}/releases/download/v"${pkgver}"/"${appname}"_"${pkgver}"_amd64.deb")
-sha256sums_x86_64=('8b83f60bdf3e299fd04cc447eb1d6d817b8ea0a50867ee7153d29a49f5e2d0e0')
+source_x86_64=("${url}/releases/download/v"${pkgver}"/"${appname}"-gtk4_"${pkgver}"_amd64.deb")
+sha256sums_x86_64=('820e367bdb45a3c6d593aeb42a11d524a6cde36955e2064753ed449794b4cdc4')
 package() {
   # Extract the deb package
-  ar x "${appname}_${pkgver}_amd64.deb"
+  ar x "${appname}-gtk4_${pkgver}_amd64.deb"
 
-  # Extract package data
-  tar -xz -f data.tar.gz -C "${pkgdir}"
+  # Extract package data (nfpm may use gz, xz, or zst compression)
+  tar -xf data.tar.* -C "${pkgdir}"
 
   # Fix permissions
   chmod 755 "${pkgdir}/usr/bin/tape"
